@@ -1,0 +1,219 @@
+/* Zerando os valores da página */
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+/* Criando as variaveis */
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Roboto', sans-serif;
+
+  --fc-primary: #E1E1E6;
+  --bc-primary: #000000;
+  --hue: 194;
+  --bc-head: hsl(var(--hue), 72%, 13%, 1);
+  --bc-button: hsla(195, 91%, 25%, 1);
+
+}
+
+
+/* Sumindo com o label, porem fazendo com que a acessibilidade leia o que está nela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+/* padronizando o font-size, add background e color */
+body {
+  font-size: 1.6rem;
+
+  background: var(--bc-primary);
+  color: var(--fc-primary);
+}
+
+
+/* Adicionando a font-family para todos os elementos contidos no body inclusive input, button... */
+body * {
+  font-family: var(--ff-primary);
+}
+
+
+thead {
+  background: var(--bc-head);
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
+
+  background: var(--bc-button);
+  color: #ffffff;
+}
+
+#app {
+  margin: 0 auto;
+
+  max-width: 112rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 11.5rem;
+}
+
+.search {
+  display: flex;
+  gap: .8rem;
+}
+
+.search input {
+  border: none;
+  font-size: 1.6rem;
+  line-height: 100%;
+
+  width: 46.2rem;
+  height: 4.8rem;
+
+  color: #7C7C8A;
+
+  padding: 1.6rem;
+  gap: 10px;
+
+  background: #06181C;
+  border-radius: 5px;
+}
+
+.search button {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3.2rem;
+  gap: .8rem;
+
+  width: 17rem;
+  height: 4.8rem;
+
+
+  background: #065E7C;
+  border-radius: .5rem;
+
+  cursor: pointer;
+}
+
+.search button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  margin-top: 8.7rem;
+  border: .1rem solid #4A808C;
+
+  width: 100%;
+
+  border-spacing: 0;
+
+
+  border-radius: 1.2rem;
+}
+
+tbody {
+  overflow: auto;
+}
+
+
+table * {
+  font-size: 2rem;
+  color: #E1E1E6;
+}
+
+table button {
+  border: none;
+  background: none;
+
+  font-weight: 700;
+  color: rgba(247, 90, 104, 1);
+}
+
+table button:hover {
+  cursor: pointer;
+
+  color: rgb(246, 74, 88);
+}
+
+table th {
+  background: rgba(9, 45, 56, 1);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 160%;
+  text-align: left;
+  padding: 1.6rem 4rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+table tr:nth-child(even) {
+  background: #06181C;
+}
+
+
+table tr:nth-child(odd) {
+  background: hsla(195, 61%, 6%, 0.5);
+}
+
+
+table td {
+  padding-left: 4rem;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+}
+
+td.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  margin: 2.4rem 1.6rem 2.4rem 0;
+}
